@@ -23,8 +23,8 @@ Game.prototype = {
 		var bodies = this.bodies;
 		var notCollidingWithAnything = function(b1){
 			return bodies.filter(function(b2){
-				return colliding(b1, b2).length === 0;
-			})
+				return colliding(b1, b2);
+			}).length === 0;
 		}
 		this.bodies = this.bodies.filter(notCollidingWithAnything);
 
